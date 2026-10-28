@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nota Secreta</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="announcement">ENVÍOS A TODO EL PAÍS · PROBÁ ANTES DE ELEGIR</div>
+  <nav class="nav container">
+    <a class="brand" href="index.html">NOTA SECRETA</a>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <div class="nav-links">
+      <a href="#packs">Discovery Packs</a>
+      <a href="#arma-tu-pack">Armá tu pack</a>
+      <a href="#perfumes">Perfumes</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="cart-link" href="carrito.html">Carrito <span id="cart-count">0</span></a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="eyebrow">DESCUBRÍ · PROBÁ · ELEGÍ</p>
+      <h1>Tu próximo perfume empieza con una muestra.</h1>
+      <p>Probá distintas fragancias desde tu casa, elegí tu favorita y descontá el valor del Discovery Pack al comprar el perfume full size.</p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="#packs">Descubrir packs</a>
+        <a class="btn btn-light" href="#como-funciona">Cómo funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container benefits-grid">
+      <div><strong>01</strong><span>Muestras seleccionadas</span></div>
+      <div><strong>02</strong><span>Probá en tu piel</span></div>
+      <div><strong>03</strong><span>Elegí sin apuro</span></div>
+      <div><strong>04</strong><span>Recuperá el valor del pack</span></div>
+    </div>
+  </section>
+
+  <section class="section container" id="como-funciona">
+    <div class="section-heading">
+      <p class="eyebrow">CÓMO FUNCIONA</p>
+      <h2>Encontrar tu perfume nunca fue tan simple.</h2>
+    </div>
+    <div class="steps-grid">
+      <article><span>01</span><h3>Elegí</h3><p>Seleccioná un Discovery Pack según los aromas que más te gustan.</p></article>
+      <article><span>02</span><h3>Probá</h3><p>Recibí las muestras y usalas varios días sobre tu piel.</p></article>
+      <article><span>03</span><h3>Descubrí</h3><p>Compará cómo evoluciona cada perfume y elegí tu favorito.</p></article>
+      <article><span>04</span><h3>Comprá</h3><p>Pedí el perfume full size y aplicá tu beneficio Nota Secreta.</p></article>
+    </div>
+  </section>
+
+  <section class="category-grid container">
+    <a class="category-card cat-sweet" href="#packs"><span>DISCOVERY SWEET</span></a>
+    <a class="category-card cat-fresh" href="#packs"><span>DISCOVERY FRESH</span></a>
+    <a class="category-card cat-night" href="#packs"><span>DISCOVERY NIGHT</span></a>
+    <a class="category-card cat-icons" href="#packs"><span>DISCOVERY ICONS</span></a>
+  </section>
+
+  <section class="section container" id="packs">
+    <div class="section-heading split">
+      <div>
+        <p class="eyebrow">DISCOVERY PACKS</p>
+        <h2>Elegí cómo querés descubrir.</h2>
+      </div>
+      <a href="#packs">Ver todos</a>
+    </div>
+    <div class="product-grid" id="packs-grid"></div>
+  </section>
+
+
+  <section class="section custom-pack-section" id="arma-tu-pack">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">ARMÁ TU PACK</p>
+        <h2>Elegí vos las 5 muestras.</h2>
+        <p>Seleccioná exactamente cinco perfumes y creá un Discovery Pack personalizado.</p>
+      </div>
+
+      <div class="custom-pack-layout">
+        <div class="sample-selector" id="sample-selector"></div>
+
+        <aside class="custom-pack-summary">
+          <p class="eyebrow">TU DISCOVERY PACK</p>
+          <h3><span id="selected-count">0</span>/5 seleccionados</h3>
+          <div id="selected-samples" class="selected-samples">
+            <p class="empty-selection">Todavía no elegiste ninguna muestra.</p>
+          </div>
+          <div class="custom-pack-price">
+            <span>Pack personalizado</span>
+            <strong>$25.000</strong>
+          </div>
+          <button id="add-custom-pack" class="btn btn-dark full" onclick="addCustomPack()" disabled>
+            Elegí 5 muestras
+          </button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="container featured-grid">
+      <div class="featured-copy">
+        <p class="eyebrow">PRODUCTO DESTACADO</p>
+        <h2>¿No sabés por dónde empezar?</h2>
+        <p>Discovery Icons reúne cinco fragancias conocidas para que compares estilos distintos y encuentres tu punto de partida.</p>
+        <a class="btn btn-dark" href="producto.html?id=pack-icons">Quiero probarlos</a>
+      </div>
+      <div class="featured-visual featured-real-photo" aria-label="Perfume y accesorios de perfumería"></div>
+    </div>
+  </section>
+
+  <section class="section container" id="perfumes">
+    <div class="section-heading">
+      <p class="eyebrow">FULL SIZE</p>
+      <h2>De muestra a favorito.</h2>
+      <p>Los perfumes que podés pedir después de probarlos.</p>
+    </div>
+    <div class="product-grid" id="perfumes-grid"></div>
+  </section>
+
+  <section class="statement" id="nosotros">
+    <div class="container statement-inner">
+      <p class="eyebrow">POR QUÉ NOTA SECRETA</p>
+      <h2>El perfume correcto no se elige en cinco minutos.</h2>
+      <p>Queremos que puedas probar, comparar y decidir con tiempo antes de invertir en un frasco completo.</p>
+    </div>
+  </section>
+
+  <section class="section container why-grid">
+    <article><h3>Probá primero</h3><p>Descubrí cómo cambia la fragancia sobre tu propia piel.</p></article>
+    <article><h3>Elegí mejor</h3><p>Compará distintos perfumes durante varios días.</p></article>
+    <article><h3>Comprá desde casa</h3><p>Sin decidir apurada en una perfumería.</p></article>
+    <article><h3>Recuperá tu inversión</h3><p>Usá el cupón para descontar el valor del pack.</p></article>
+  </section>
+
+  <section class="section container" id="faq">
+    <div class="section-heading">
+      <p class="eyebrow">FAQ</p>
+      <h2>Preguntas frecuentes.</h2>
+    </div>
+    <div class="faq-list">
+      <details><summary>¿Qué es un Discovery Pack?</summary><p>Es una selección de 5 muestras pensada para probar distintas fragancias antes de elegir un perfume full size.</p></details>
+      <details><summary>¿Cómo funciona el descuento?</summary><p>En este prototipo podés usar el código <strong>SECRET25</strong> en el carrito para descontar $25.000 sobre perfumes.</p></details>
+      <details><summary>¿Puedo usar el beneficio más de una vez?</summary><p>Para el modelo real sería de un solo uso. En este prototipo académico el cupón sirve para demostrar la mecánica.</p></details>
+      <details><summary>¿Cuántas muestras vienen?</summary><p>Cada Discovery Pack incluye 5 muestras de 2 ml.</p></details>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+      <div>
+        <p class="eyebrow">NEWSLETTER</p>
+        <h2>Hay notas que vale la pena descubrir.</h2>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!')">
+        <input type="email" placeholder="Tu email" required>
+        <button class="btn btn-dark" type="submit">Quiero descubrir</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><div class="brand">NOTA SECRETA</div><p>Probá primero. Elegí después.</p></div>
+    <div><strong>Tienda</strong><a href="#packs">Discovery Packs</a><a href="#perfumes">Perfumes</a></div>
+    <div><strong>Ayuda</strong><a href="#como-funciona">Cómo funciona</a><a href="#faq">FAQ</a></div>
+    <div><strong>Seguinos</strong><span>@notasecreta.ar</span><span>Buenos Aires, Argentina</span></div>
+  </div>
+  <div class="copyright">© 2026 Nota Secreta · Proyecto académico</div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

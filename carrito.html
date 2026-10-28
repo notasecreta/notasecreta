@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito · Nota Secreta</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header compact">
+  <nav class="nav container">
+    <a class="brand" href="index.html">NOTA SECRETA</a>
+    <a class="cart-link" href="carrito.html">Carrito <span id="cart-count">0</span></a>
+  </nav>
+</header>
+
+<main class="cart-page container">
+  <a class="back-link" href="index.html">← Seguir comprando</a>
+  <div class="section-heading">
+    <p class="eyebrow">TU SELECCIÓN</p>
+    <h1>Carrito.</h1>
+  </div>
+
+  <div class="cart-layout">
+    <section id="cart-items" class="cart-items"></section>
+    <aside class="cart-summary">
+      <h3>Resumen</h3>
+      <div class="summary-row"><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+      <div class="coupon-box">
+        <label for="coupon">Código de descuento</label>
+        <div class="coupon-inline">
+          <input id="coupon" type="text" placeholder="SECRET25">
+          <button onclick="applyCoupon()">Aplicar</button>
+        </div>
+        <small id="coupon-message">Usá SECRET25 sobre perfumes.</small>
+      </div>
+      <div class="summary-row discount"><span>Descuento</span><strong id="discount">-$0</strong></div>
+      <div class="summary-row total"><span>Total</span><strong id="total">$0</strong></div>
+      <button class="btn btn-dark full" onclick="checkout()">Finalizar compra</button>
+    </aside>
+  </div>
+</main>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script>
+  renderCart();
+</script>
+</body>
+</html>
